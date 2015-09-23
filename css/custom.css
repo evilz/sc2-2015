@@ -1,0 +1,579 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(font-starcraft.css);
+
+.map-card {
+    height: 320px;
+    margin-top: 20px;
+}
+
+    .map-card .img-box {
+        border: solid white 3px;
+        overflow: hidden;
+    }
+
+    .map-card .card-img-top {
+        height: 200px;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .map-card .mask {
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.35);
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        border-radius: 3px 3px 0 0;
+        width: 100%;
+        height: 200px;
+        margin-top: -200px;
+        font-size: 56px;
+        color: white;
+    }
+
+        .map-card .mask h2 {
+            display: block;
+            top: 25%;
+            position: absolute;
+            left: 42%;
+        }
+
+    .map-card .card-block {
+        height: 120px;
+        border: solid white 3px;
+        background: rgba(255, 255, 255, 0.8);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: none;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+        .map-card .card-block:hover {
+            height: 120px;
+            border: solid white 3px;
+            background: rgba(255, 255, 255, 0.9);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-top: none;
+            color: black;
+        }
+
+            .map-card .card-block:hover .card-title {
+                -webkit-transform: scale(1.05,1.05);
+                -moz-transform: scale(1.05,1.05);
+                -o-transform: scale(1.05,1.05);
+                -ms-transform: scale(1.05,1.05);
+                transform: scale(1.05,1.05);
+            }
+
+
+    .map-card .card-title {
+        height: 50px;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+
+
+    .map-card .img-box:hover .card-img-top {
+        -webkit-transform: scale(1.1,1.1);
+        -moz-transform: scale(1.1,1.1);
+        -o-transform: scale(1.1,1.1);
+        -ms-transform: scale(1.1,1.1);
+        transform: scale(1.1,1.1);
+    }
+
+    .map-card .img-box:hover .mask {
+        -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=85)";
+        filter: alpha(opacity=85);
+        opacity: 0.85;
+    }
+
+.veto h5 {
+    margin: 0;
+}
+
+.veto .btn-sm {
+    font-size: .65rem;
+    margin-top: -2px;
+    margin-left: 5px;
+}
+
+body {
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-color: #000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/*
+        * Header
+        */
+
+.masthead {
+    margin-bottom: 2rem;
+}
+
+.navbar-brand {
+    margin-bottom: 0;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+.nav-masthead .nav-link {
+    padding: .25rem 0;
+    font-weight: bold;
+    color: rgba(255,255,255,.5);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+    text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+    .nav-masthead .nav-link + .nav-link {
+        margin-left: 1rem;
+    }
+
+.nav-masthead .active,
+.nav-masthead .active a {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+footer {
+    margin: 40px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+
+/* BRACKETS */
+.row.bracket {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.jQBracket {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    position: relative
+}
+
+div.jQBracket .tools {
+    position: absolute;
+    top: 0;
+    color: #fff
+}
+
+div.jQBracket .tools span {
+    cursor: pointer;
+    margin: 5px;
+    display: block;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    background-color: #666
+}
+
+div.jQBracket .tools span:hover {
+    background-color: #999
+}
+
+div.jQBracket .finals {
+    float: right;
+    right: 0;
+    clear: right;
+    position: relative
+}
+
+div.jQBracket .bracket {
+    float: right;
+    clear: left
+}
+
+div.jQBracket .loserBracket {
+    float: right;
+    clear: left;
+    position: relative
+}
+
+div.jQBracket .round {
+    position: relative;
+    width: 100px;
+    margin-right: 40px;
+    float: left
+}
+
+div.jQBracket .match {
+    position: relative
+}
+
+div.jQBracket .editable {
+    cursor: pointer
+}
+
+div.jQBracket .team {
+    position: relative;
+    z-index: 1;
+    float: left;
+    background-color: #222;
+    width: 100px;
+    cursor: default
+}
+
+div.jQBracket .team:first-child {
+    border-bottom: 1px solid #999
+}
+
+div.jQBracket .team input {
+    font-size: 12px;
+    padding: 0;
+    width: inherit;
+    border: 0;
+    margin: 0;
+    color: black;
+}
+
+div.jQBracket .team div.label {
+    padding: 3px;
+    position: absolute;
+    width: 70px;
+    height: 22px;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+div.jQBracket .team div.label[disabled] {
+    cursor: default
+}
+
+div.jQBracket .team div.score {
+    float: right;
+    padding: 3px;
+    background-color: rgba(255,255,255,.3);
+    text-align: center;
+    width: 20px;
+    font-weight: bolder;
+}
+
+div.jQBracket .team div.score[disabled] {
+    color: #999;
+    cursor: default
+}
+
+div.jQBracket .team div.label input.error,div.jQBracket .team div.score input.error {
+    background-color: #fcc
+}
+
+div.jQBracket .team.np {
+    background-color: #666;
+    color: #eee
+}
+
+div.jQBracket .team.na {
+    background-color: #999;
+    color: #ccc
+}
+
+div.jQBracket .team.win {
+    color: #333
+}
+
+div.jQBracket .team.win div.score {
+    color: #00be00;
+
+}
+
+div.jQBracket .team.lose div.score {
+    color: #d60000
+}
+
+div.jQBracket .team.lose {
+    background-color: #333;
+    color: #999
+}
+
+div.jQBracket .team.tie div.score {
+    color: #00f
+}
+
+div.jQBracket .team.highlightWinner {
+    background-color: #da0;
+    color: #000
+}
+
+div.jQBracket .team.highlightLoser {
+    background-color: #0275d8;
+    color: #000
+}
+
+div.jQBracket .team.highlight {
+    background-color: #3c0;
+    color: #000
+}
+
+div.jQBracket .teamContainer {
+    z-index: 1;
+    position: relative;
+    float: left
+}
+
+div.jQBracket .connector {
+    border: 2px solid #666;
+    border-left-style: none;
+    position: absolute;
+    z-index: 1
+}
+
+div.jQBracket .connector div.connector {
+    border: 0;
+    border-bottom: 2px solid #666;
+    height: 0;
+    position: absolute
+}
+
+div.jQBracket .connector.highlightWinner,div.jQBracket .connector div.connector.highlightWinner {
+    border-color: #da0
+}
+
+div.jQBracket .connector.highlightLoser,div.jQBracket .connector div.connector.highlightLoser {
+    border-color: #ccc
+}
+
+div.jQBracket .connector.highlight,div.jQBracket .connector div.connector.highlight {
+    border-color: #0c0
+}
+
+div.jQBracket .np .connector,div.jQBracket .np .connector div.connector {
+    border-color: #222
+}
+
+div.jQBracket .bubble {
+    height: 22px;
+    line-height: 22px;
+    width: 30px;
+    right: -35px;
+    position: absolute;
+    text-align: center;
+    font-size: 11px
+}
+
+div.jQBracket .bubble.third {
+    background-color: #963;
+    color: #d95
+}
+
+div.jQBracket .bubble.fourth {
+    background-color: #678;
+    color: #ccd
+}
+
+div.jQBracket .bubble:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent
+}
+
+div.jQBracket .bubble:after {
+    left: -5px;
+    border-left: 0
+}
+
+div.jQBracket .bubble.third:after {
+    border-right: 6px solid #963
+}
+
+div.jQBracket .bubble.fourth:after {
+    border-right: 6px solid #678
+}
+
+div.jQBracket .highlightWinner .bubble {
+    background-color: #da0;
+    color: #960
+}
+
+div.jQBracket .highlightWinner .bubble:after {
+    border-right-color: #da0
+}
+
+div.jQBracket .highlightLoser .bubble {
+    background-color: #ccc;
+    color: #333
+}
+
+div.jQBracket .highlightLoser .bubble:after {
+    border-right-color: #ccc
+}
+
+div.jQBracket.rl .finals {
+    float: left;
+    left: 0;
+    clear: left
+}
+
+div.jQBracket.rl .bracket {
+    float: left;
+    clear: right
+}
+
+div.jQBracket.rl .loserBracket {
+    float: left;
+    clear: right
+}
+
+div.jQBracket.rl .round {
+    margin-right: 0;
+    margin-left: 40px;
+    float: right
+}
+
+div.jQBracket.rl .team {
+    float: right
+}
+
+div.jQBracket.rl .team div.label {
+    right: 0
+}
+
+div.jQBracket.rl .team div.score {
+    float: left
+}
+
+div.jQBracket.rl .teamContainer {
+    float: right
+}
+
+div.jQBracket.rl .connector {
+    border-left-style: solid;
+    border-right-style: none;
+    border-width: 2px
+}
+
+div.jQBracket.rl .connector.highlightWinner,div.jQBracket.rl .connector div.connector.highlightWinner {
+    border-color: #da0
+}
+
+div.jQBracket.rl .connector.highlightLoser,div.jQBracket.rl .connector div.connector.highlightLoser {
+    border-color: #ccc
+}
+
+div.jQBracket.rl .connector.highlight,div.jQBracket.rl .connector div.connector.highlight {
+    border-color: #0c0
+}
+
+div.jQBracket.rl .bubble {
+    left: -35px
+}
+
+div.jQBracket.rl .bubble.third {
+    background-color: #963;
+    color: #310
+}
+
+div.jQBracket.rl .bubble.fourth {
+    background-color: #678;
+    color: #ccd
+}
+
+div.jQBracket.rl .bubble:after {
+    left: auto;
+    right: -5px;
+    border-left: 5px solid transparent;
+    border-right: 0
+}
+
+div.jQBracket.rl .bubble.third:after {
+    border-right: 0;
+    border-left: 6px solid #963
+}
+
+div.jQBracket.rl .bubble.fourth:after {
+    border-right: 0;
+    border-left: 6px solid #678
+}
+
+div.jQBracket.rl .highlightWinner .bubble:after {
+    border-left-color: #da0
+}
+
+div.jQBracket.rl .highlightLoser .bubble:after {
+    border-left-color: #ccc
+}
+
+div.jQBracket .label {
+    line-height: 21px;
+}
+
+ .sc-protoss {
+    color: #da0;
+    text-shadow: #000000 1px 1px 1px;
+    margin-right: 5px;
+}
+
+ .sc-terran{
+    color: #bb1010;
+    text-shadow: #000000 1px 1px 1px;
+    margin-right: 5px;
+}
+
+
+.sc-zerg {
+    color: #7b147a;
+    text-shadow: #000000 1px 1px 1px;
+    margin-right: 5px;
+}
+
+
+/* POOL */
+.jqgroup .round {
+    width: 30%;
+    float: left;
+    clear: none;
+    position: relative;
+    border: .0625rem solid #e5e5e5;
+    border-radius: .25rem;
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 1%;
+}
+
+.jqgroup .round header {
+ font-size: 1.75rem;
+}
+
+.jqgroup .match {
+    background-color: rgba(221, 221, 221,0.4);
+   
+}
+
+.jqgroup .match div.label {
+     color: black;
+}
+
+
+.row.transparent-white {
+    background: rgba(255, 255, 255, 0.9);
+}
