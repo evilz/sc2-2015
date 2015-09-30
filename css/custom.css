@@ -137,6 +137,7 @@ body {
     color: #fff;
     text-align: center;
     text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+    font-size: 1.8em;
 }
 
 .nav-masthead .nav-link {
@@ -255,10 +256,14 @@ div.jQBracket .team input {
 div.jQBracket .team div.label {
     padding: 3px;
     position: absolute;
-    width: 70px;
+    width: 80px;
     height: 22px;
     white-space: nowrap;
     overflow: hidden
+}
+
+div.jQBracket .team div.label:empty {
+    display: block;
 }
 
 div.jQBracket .team div.label[disabled] {

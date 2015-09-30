@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
    
 
-
-    <link rel="stylesheet" type="text/css" href="css/jquery.group.min.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.bracket.min.css" />
 
     <link href="css/custom.css" rel="stylesheet">
@@ -25,7 +23,7 @@
 
     <div class="container">
         <nav class="navbar masthead">
-            <a class="navbar-brand" href="#">GPTP 2015</a>
+            <a class="navbar-brand" href="#"><img src="img/gptp.jpg" height="40" class="pull-left"/>&nbsp;GPTP 2015</a>
             <ul class="nav navbar-nav pull-right nav-masthead">
                 <li class="nav-item ">
                     <a class="nav-link" href="index.html">Map pool generator</a>
@@ -64,30 +62,25 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/jsrender.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/lodash-2.2.1.min.js"></script>
-
+  
     <script src="js/isotope.min.js"></script>
-    <script src="js/handlebars-v4.0.2.js"></script>
-    <script src="js/Bacon.min.js"></script>
-    <script type="text/javascript" src="js/jquery.bracket.min.js"></script>
-    <script type="text/javascript" src="js/jquery.group.min.js"></script>
 
-    <script type="text/javascript" src="brackets.js"></script>
+    <script type="text/javascript" src="pools.js"></script>
 
-<script id="pool-template" type="text/x-jsrender">
-    
-    {{for  pools}}
+    <script id="pool-template" type="text/x-jsrender">
+
+        {{for  pools}}
         <div class="col-md-4">
             <div class="card">
                 <div class="card-block">
                     <h4 class="card-title">Group {{:#index + 1}}</h4>
                 </div>
-               
+
                 <table class="table table-inverse table-sm">
                     <tbody>
                         {{for  players}}
@@ -126,169 +119,58 @@
 
             </div>
         </div>
-    {{/for}}
+        {{/for}}
 
     </script>
 
-<script>
+    <script>
 
-    var pools = {
+        function getRace(player) {
+            var race = "";
+            if (player.length >= 3 && player.substring(0, 1) === '[' && player.substring(2, 3) === ']') {
+                race = player.substring(1, 2);
+            }
+            return race;
+        }
 
-        pools: [
+        function renderLabelColorFn(s1, s2) {
+            if (s1 > s2) {
+                return "label-success";
+            }
+            if (s2 > s1) {
+                return "label-danger";
+            }
+        };
 
-            // group1
+        function renderNameFn(player) {
+            if (player === undefined)
+                return;
+
+            var race = getRace(player);
+
+            if (race !== "") {
+                name = player.substring(3);
+                var cssClass = "";
+                if (race.toUpperCase() === "T") cssClass = "sc-terran";
+                if (race.toUpperCase() === "P") cssClass = "sc-protoss";
+                if (race.toUpperCase() === "Z") cssClass = "sc-zerg";
+                return '<span class="' + cssClass + '"></span> ' + name;
+            } else
+                return player;
+
+        }
+
+        var tmpl = $.templates("#pool-template");
+        var html = tmpl.render(pools,
             {
-                players: ['[T]warwan', '[P]Pulsions', '[Z]WantonNeeds','-'],
-                matchs: [
-                    { p1: 0, p2: 2, s1: 2, s2: 0 },
-                    { p1: 0, p2: 1, s1: 2, s2: 0 },
-                    { p1: 2, p2: 1, s1: 0, s2: 2 },
-                ],
-                date: '01/09/2015'
-            },
+                renderName: renderNameFn,
+                renderLabelColor: renderLabelColorFn
+            }
+        );
 
-            //group2
-            {
-                players: ['[P]crow', '[T]Bobo', '[T]ZGab25', '-'],
-                matchs: [
-                    { p1: 0, p2: 2, s1: 2, s2: 0 },
-                    { p1: 0, p2: 1, s1: 2, s2: 0 },
-                    { p1: 1, p2: 2, s1: 2, s2: 0 },
-                ],
-                date: '01/09/2015'
-            },
+        $("#pools").html(html);
 
-            //group3
-            {
-                players: ['[T]dukan', '[T]Ulver', '[T]Zeedo', '[T]Alex'],
-                matchs: [
-                    { p1: 0, p2: 1, s1: 2, s2: 0 },
-                ],
-                date: '01/09/2015'
-            },
-            //group4
-             {
-                 players: ['[P]KarlsBerg', '[T]F10p', '[T]MrLight', '[T]Limbshaft'],
-                 matchs: [
-                     { p1: 0, p2: 2, s1: 2, s2: 0 },
-                     { p1: 0, p2: 1, s1: 2, s2: 0 },
-                     { p1: 1, p2: 2, s1: 2, s2: 0 },
-                 ],
-                 date: '01/09/2015'
-             },
-
-             //group5
-             {
-                 players: ['[P]Evilz', '[T]ThgX', '[T]nyaa', '[T]lun'],
-                 matchs: [
-                     { p1: 0, p2: 2, s1: 2, s2: 0 },
-                     { p1: 0, p2: 1, s1: 2, s2: 0 },
-                     { p1: 1, p2: 2, s1: 2, s2: 1 },
-                 ],
-                 date: '01/09/2015'
-             },
-
-             //group6
-             {
-                 players: ['[Z]Neths', '[T]tahitiBob', '[T]maattdd', '-'],
-                 matchs: [
-                     { p1: 0, p2: 2, s1: 2, s2: 0 },
-                     { p1: 0, p2: 1, s1: 2, s2: 0 },
-                     { p1: 1, p2: 2, s1: 2, s2: 1 },
-                 ],
-                 date: '01/09/2015'
-             },
-
-             //group7
-             {
-                 players: ['[T]fidzysss', '[T]motchi', '[T]skilo', '-'],
-                 matchs: [
-                     { p1: 1, p2: 2, s1: 0, s2: 0 },
-                     { p1: 0, p2: 1, s1: 0, s2: 0 },
-                     { p1: 1, p2: 2, s1: 0, s2: 0 },
-                 ],
-                 date: '01/09/2015'
-             },
-
-              //group8
-             {
-                 players: ['[T]Vrowgh', '[T]Ombre', '[T]afone', '-'],
-                 matchs: [
-                     { p1: 0, p2: 2, s1: 2, s2: 0 },
-                     { p1: 0, p2: 1, s1: 2, s2: 0 },
-                     { p1: 1, p2: 2, s1: 2, s2: 0 },
-                 ],
-                 date: '01/09/2015'
-             },
-
-              //group9
-             {
-                 players: ['[T]Mout', '[T]jessicachen', '[T]Melkor', '[T]--'],
-                 matchs: [
-                    
-                 ],
-                 date: '01/09/2015'
-             },
-
-              //group10
-             {
-                 players: ['[T]Wayepi', '[T]CoolSpot', '[T]Zimbali', '[T]kirosu'],
-                 matchs: [
-
-                 ],
-                 date: '01/09/2015'
-             },
-        ]
-    };
-
-   
-    function getRace(player) {
-        var race = "";
-        if (player.length >= 3 && player.substring(0, 1) === '[' && player.substring(2, 3) === ']') {
-            race = player.substring(1, 2);
-
-        }
-        return race;
-    }
-
-    function renderLabelColorFn(s1, s2) {
-        if (s1 > s2) {
-            return "label-success";
-        }
-        if (s2 > s1) {
-            return "label-danger";
-        }
-    };
-
-    function renderNameFn(player) {
-        if (player === undefined)
-            return;
-
-        var race = getRace(player);
-
-        if (race !== "") {
-            name = player.substring(3);
-            var cssClass = "";
-            if (race.toUpperCase() === "T") cssClass = "sc-terran";
-            if (race.toUpperCase() === "P") cssClass = "sc-protoss";
-            if (race.toUpperCase() === "Z") cssClass = "sc-zerg";
-            return '<span class="' + cssClass + '"></span> ' + name;
-        } else
-            return player;
-        
-    }
-
-    var tmpl = $.templates("#pool-template");
-    var html = tmpl.render(pools,
-        {
-            renderName: renderNameFn,
-            renderLabelColor: renderLabelColorFn
-        }
-    );
-
-    $("#pools").html(html);
-
-</script>
+    </script>
 </body>
 
 </html>

@@ -1,6 +1,103 @@
 ﻿var defaultBrackets = {
-    teams: [
-        [{ name: "Team 1", race: "T" }, { name: "Team 2", race: "Z" }],
-        [{ name: "Team 3", race: "P" }, { name: "Team 4", race: "Z" }]
+    teams:
+    [
+    [{
+        race: "",
+        name: "warwan"
+    }, {
+        race: "",
+        name: "F10p"
+    }], [{
+        race: "",
+        name: "motchi"
+    }, {
+        race: "",
+        name: "Ulver"
+    }], [{
+        race: "P",
+        name: "crow"
+    }, {
+        race: "",
+        name: "MrGreen"
+    }], [{
+        race: "",
+        name: "durkan"
+    }, {
+        race: "",
+        name: "Ombre"
+    }], [{
+        race: "P",
+        name: "KarlsBerg"
+    }, {
+        race: "",
+        name: "ThgX"
+    }], [{
+        race: "",
+        name: "Samii"
+    }, {
+        race: "",
+        name: "Rultane"
+    }], [{
+        race: "P",
+        name: "Evilz"
+    }, {
+        race: "T",
+        name: "Air"
+    }], [{
+        race: "Z",
+        name: "Neths"
+    }, {
+        race: "",
+        name: "skilo"
+    }], [{
+        race: "",
+        name: "fidzysss"
+    }, {
+        race: "",
+        name: "ZGab25"
+    }], [{
+        race: "T",
+        name: "Vrowgh"
+    }, {
+        race: "",
+        name: "tahitiBob"
+    }], [{
+        race: "",
+        name: "Mout"
+    }, {
+        race: "",
+        name: "Limbshaft"
+    }], [{
+        race: "",
+        name: "Wayepi"
+    }, {
+        race: "T",
+        name: "darkyokai"
+    }], [{
+        race: "",
+        name: "CoolSpot"
+    }, {
+        race: "",
+        name: "safir"
+    }], [{
+        race: "Z",
+        name: "suistrop"
+    }, {
+        race: "",
+        name: "Pulsions"
+    }], [{
+        race: "",
+        name: "Sebi"
+    }, {
+        race: "",
+        name: "Bobo"
+    }], [{
+        race: "",
+        name: "Angel"
+    }, {
+        race: "",
+        name: "Zimbali"
+    }]],
+    "results": [[[[null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null]], [[null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null]], [[null, null], [null, null], [null, null], [null, null]], [[null, null], [null, null]], [[null, null], [null, null]]]
     ]
 };
