@@ -92,8 +92,8 @@
         race: "",
         name: "Bobo"
     }], [{
-        race: "",
-        name: "Angel"
+        race: "P",
+        name: "HellOne"
     }, {
         race: "",
         name: "Zimbali"
