@@ -1,12 +1,10 @@
 ﻿var defaultBrackets = {
-    teams:
-    [
-    [{
+    teams: [[{
         race: "",
-        name: "warwan"
+        name: "Durkan"
     }, {
         race: "",
-        name: "F10p"
+        name: "Flop"
     }], [{
         race: "",
         name: "motchi"
@@ -21,7 +19,7 @@
         name: "MrGreen"
     }], [{
         race: "",
-        name: "durkan"
+        name: "Melkor"
     }, {
         race: "",
         name: "Ombre"
@@ -47,7 +45,7 @@
         race: "Z",
         name: "Neths"
     }, {
-        race: "",
+        race: "T",
         name: "skilo"
     }], [{
         race: "",
@@ -98,8 +96,5 @@
         race: "P",
         name: "Zimbali"
     }]],
-    "results": [[[
-        [null,null],[null,null],[2,0],[0,null],[null,null],[null,null],[2,0],[0,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[2,0]],[[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null],[null,null]],[[null,null],[null,null],[null,null],[null,null]],[[null,null],[null,null]],[[null,null],[null,null]
-        ]]
-    ]
-};
+    results: [[[[0, 2], [2, 0], [2, 0], [2, 1], [0, null], [2, 0], [2, 0], [2, 1], [null, null], [null, null], [null, null], [null, null], [2, 1], [2, 0], [2, 0], [2, 0]], [[null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null], [null, null]], [[null, null], [null, null], [null, null], [null, null]], [[null, null], [null, null]], [[null, null], [null, null]]]]
+}
