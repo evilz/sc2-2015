@@ -591,3 +591,28 @@ div.jQBracket .label {
     font-size: 0.8rem;
     height: 410px;
 }
+
+
+
+
+/* border league*/
+/*div.jQBracket .team{
+width: 120px;
+
+    border-image: url(http://eu.battle.net/sc2/static/images/profile/portrait-summary-diamond.png) 15 15 stretch;
+    border-width: 10px;
+    background-clip: content-box;
+}
+
+
+
+div.jQBracket .team:first-child {
+
+    border-width: 10px;
+}
+
+
+div.jQBracket .team div.label{
+width: 80px;
+
+}*/
